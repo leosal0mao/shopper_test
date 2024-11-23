@@ -14,10 +14,14 @@
     "@googlemaps/google-maps-services-js": "^3.4.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.1",
+    "better-sqlite3": "^11.5.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/sqlite3": "^3.1.11"
   }
 }

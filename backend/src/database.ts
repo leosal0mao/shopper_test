@@ -1,14 +1,9 @@
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite3';
+import Database from 'better-sqlite3';
 
-export const initializeDb = async () => {
-    const db = await open({
-        filename: './database.sqlite',
-        driver: sqlite3.Database,
-    });
+export const initializeDb = () => {
+    const db = new Database('./database.sqlite');
 
-    // Tabelas básicas
-    await db.exec(`
+    db.exec(`
         CREATE TABLE IF NOT EXISTS drivers (
             id INTEGER PRIMARY KEY,
             name TEXT,
